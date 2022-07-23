@@ -9,7 +9,7 @@ Desarrollado en Linux (Debian10), VSCode
 ## Clonar el proyecto y abrir desde VSCode
 ```sh
 git clone https://github.com/Centurion95/nodejs-task-manager-api.git
-cd web-scraping-node-js-selenium
+cd nodejs-task-manager-api
 code .
 ```
 
