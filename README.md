@@ -29,6 +29,9 @@ npm start
 ```
 
 ## Acerca de
+rc95 - 23/07/2022 12:15
+- Cambios en readme y ultimos comentarios del curso
+
 rc95 - 23/07/2022 10:41
 - Primera versión del proyecto
 - Se agrega .gitignore
