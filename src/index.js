@@ -250,18 +250,41 @@ app.post('/upload', upload.single('upload'), (req, res) => {
 // creamos la cuenta gratis
 // creamos nuestro cluster gratis
 // configuramos la ip 0.0.0.0/0
-// creamos el usuario: taskapp (podmos autogenerar el password, como este:) 4XKPbOuagF2EoIie
+// creamos el usuario: taskapp (podmos autogenerar el password, como este:) asd32165as4d98d
 // le damos conectar, y vamos a seguir las instrucciones para: descargar, instalar y conectarnos por mongoDB Compass..
 // guardamos la conexión
 
 
 // 135. heroku deployment - rc95 23/07/2022 10:34
-// git init --initial-branch=main
+// git init 
+// git checkout -b main
 // git status
 // creamos en la raiz el archivo .gitignore (excluimos todo lo que no queremos..)
 // git status
 // git add .
 // git commit -m "first commit"
+// publicamos en github
+//publicamos en heroku...
+// heroku create rc95-nodejs-task-manager-api
+//configuramos las variables de entorno en heroku..
+// heroku config:set key=value (por ejemplo)
+//podemos verificar con:
+// heroku config
+//para eliminar:
+// heroku config:unset key
+//bueno, ahora si vamos a configurar todas nuestras variables..
+// heroku config:set JWT_SECRET=thisismynewsecret SENDGRID_API_KEY=tu_api_aqui SENDGRID_MAIL_FROM=centu95@hotmail.com MONGODB_URL='cadena_De_conexion_aqui'
+//OBS: este punto anterior se puede hacer directamente desde la web de heroku... agregar, eliminar, editar variables..
+//finalmente vamos a hacer push a heroku..
+// git push heroku main
+//https://rc95-nodejs-task-manager-api.herokuapp.com
+//ahora vamos a hacer todo en postman..
+//configuramos el entorno de produccion (variable URL)
+//apunto al entorno de produccion, y pruebo mis requests....
+//creo un usuario..
+//creo una tarea...
+//vemos en mongoDB Compass que las colecciones SI se estan creando..
+//fin: rc95 23/07/2022 12:08
 
 
 // 16 testing nodejs
