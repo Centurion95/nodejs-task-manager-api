@@ -1,5 +1,32 @@
-const app = require('./app')
+const express = require('express')
+require('./db/mongoose')
+const userRouter = require('./routers/user')
+const taskRouter = require('./routers/task')
+
+const app = express()
 const port = process.env.PORT//|| 3001
+
+/*
+// rc95 18/07/2022 12:03 - middleware - debe estar aqui..
+app.use((req, res, next) => {
+    // console.log('middleware: ', req.method, req.path)
+    // next() //sin esto, el middleware nunca va a continuar..
+
+    // if (req.method === 'GET') {
+    //     res.send('GET requests are disabled')
+    // } else {
+    //     next()
+    // }
+
+    //tarea del profesor
+    res.status(503).send('Sitio en mantenimiento!')
+})
+*/
+
+app.use(express.json()) //con esto vamos a parsear automaticamente el json entrante a un objeto..
+app.use(userRouter)
+app.use(taskRouter)
+
 app.listen(port, () => {
     console.log('Server listening at http://localhost:' + port + '/')
 })
@@ -297,9 +324,7 @@ app.post('/upload', upload.single('upload'), (req, res) => {
 //separamos las cosas en el index.js..
 //en /src creamos app.js
 
-// 143. jest setup and teardown - rc95 24/07/2022 02:01
-
-
+// 143. jest setup and teardown
 // 144. testing with authentication
 // 145. advanced assertions
 // 146. mocking libraries

@@ -29,6 +29,9 @@ npm start
 ```
 
 ## Acerca de
+rc95 - 26/07/2022 01:02
+- Se agrega todo lo relacionado a testing: `npm test`
+
 rc95 - 23/07/2022 12:15
 - Cambios en readme y ultimos comentarios del curso
 
